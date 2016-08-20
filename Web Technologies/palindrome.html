@@ -1,0 +1,53 @@
+<?xml version = "1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xlmns = "http://www.w3.org/1999/xhtml">
+<head>
+<title>Palindrome.</title>
+<meta name="Description" content = "Palindrome."/>
+</head>
+<script>
+	function checkPalindrome(){
+		var num = prompt("Enter the number");
+
+	var n = num;
+ 	var rev = 0;
+	var dig = 0;
+ 	while (num > 0)
+ 	{
+     		dig = parseInt(num % 10);
+      		rev = parseInt(rev * 10) + dig;
+      		num = parseInt(num / 10);
+ 	}
+
+
+	if(rev == n)
+		window.alert("The number is a palindrome !!!" );
+	else 
+		window.alert("The number is not a palindrome !!!");
+	}
+
+	function printReverse(){
+	var num = prompt("Enter the number");
+
+	var n = num;
+ 	var rev = 0;
+	var dig = 0;
+ 	while (num > 0)
+ 	{
+     		dig = parseInt(num % 10);
+      		rev = parseInt(rev * 10) + dig;
+      		num = parseInt(num / 10);
+ 	}		
+
+	window.alert(rev);
+	}
+</script>
+
+<body>
+	<p>Click the button to enter the number</p>
+	<form>
+		<input type="button" value="Click to see reverse of the number" onclick="printReverse();"/>
+		<input type="button" value="Click Here" onclick="checkPalindrome();"/>
+	</form>
+</body>
+</html>
